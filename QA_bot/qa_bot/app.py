@@ -16,8 +16,8 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent
 CHROMA_DIR = BASE_DIR / "chroma_db"
-CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 200
+CHUNK_SIZE = 1000 # Adjusted chunk size for better context handling with LLMs, especially for larger documents.
+CHUNK_OVERLAP = 200 # Increased overlap to ensure better context continuity across chunks, which can help LLMs generate more accurate answers based on the retrieved information.
 EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
 LLM_MODEL = os.getenv("OPENAI_LLM_MODEL", "gpt-4o-mini")
 

@@ -121,6 +121,7 @@ if __name__ == "__main__":
     print(f"Embedding model: {EMBEDDING_MODEL}")
     print(f"LLM model: {LLM_MODEL}")
     
+    # Launch the Gradio interface
     interface = gr.Interface(
         fn=answer_pdf,
         inputs=[
